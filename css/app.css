@@ -488,6 +488,12 @@
     color: #fff;
     padding: 5px 41px;
   }
+  #slider .text-content {
+    bottom: 10px;
+  }
+  #slider .text-description {
+    margin-top: 10px;
+  }
   #content .members-img {
     width: 60%;
   }
