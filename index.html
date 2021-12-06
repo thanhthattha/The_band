@@ -6,6 +6,11 @@
     <title>The Band - W3S</title>
     <link rel="icon" href="./img/logo.png" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
@@ -51,12 +56,42 @@
         </div>
       </div>
       <div id="slider">
-        <div class="text-content">
-          <h2 class="text-heading fz-24">Los Angeles</h2>
-          <div class="text-description">
-            We had the best time playing at Venice Beach!
+        <!--  -->
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="./img/slider/slider1.jpg" style="width: 100%" />
+            <div class="text-content">
+              <h2 class="text-heading fz-24">Los Angeles</h2>
+              <div class="text-description">
+                We had the best time playing at Venice Beach!
+              </div>
+            </div>
           </div>
+
+          <div class="mySlides fade">
+            <img src="./img/slider/slider2.jpg" style="width: 100%" />
+            <div class="text-content">
+              <h2 class="text-heading fz-24">New York</h2>
+              <div class="text-description">
+                The atmosphere in New York is lorem ipsum.
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./img/slider/slider3.jpg" style="width: 100%" />
+            <div class="text-content">
+              <h2 class="text-heading fz-24">Chicago</h2>
+              <div class="text-description">
+                Thank you, Chicago - A night we won't forget.
+              </div>
+            </div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br />
       </div>
       <div id="content">
         <!-- Content -->
@@ -186,7 +221,9 @@
         <!-- Modal -->
         <div class="modal js-modal">
           <div class="modal-container js-modal-container">
-            <div class="modal-close js-modal-close">X</div>
+            <div class="modal-close js-modal-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
             <header class="modal-header">
               <ion-icon name="gift" class="modal-heading-icon"></ion-icon
               >Tickets
@@ -223,7 +260,10 @@
                 Need <a href="#" class="modal-help">help?</a>
               </p>
               <div class="modal-close-btn">
-                <button class="js-modal-close2">Close X</button>
+                <button class="js-modal-close2">
+                  Close
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
               </div>
             </footer>
           </div>
