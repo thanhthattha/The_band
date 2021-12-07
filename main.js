@@ -7,7 +7,7 @@ const header = document.getElementById("header");
 const mobileMenu = document.getElementById("mobile-menu");
 const headerHeight = header.clientHeight;
 const menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-let slideIndex = 1;
+let index = 1;
 
 // Modal
 function showBuyTickets() {
@@ -48,22 +48,22 @@ for (let index = 0; index < menuItems.length; index++) {
   };
 }
 // Slider
-showSlides(slideIndex);
+showSlides(index);
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  showSlides((index += n));
 }
 function currentSlide(n) {
-  showSlides((slideIndex = n));
+  showSlides((index = n));
 }
 function showSlides(n) {
   let i;
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
-    slideIndex = 1;
+    index = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    index = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -71,6 +71,6 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[index - 1].style.display = "block";
+  dots[index - 1].className += " active";
 }
