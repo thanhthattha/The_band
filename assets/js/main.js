@@ -25,6 +25,7 @@ modal.addEventListener("click", hideBuyTicket);
 modalContainer.addEventListener("click", function (e) {
   e.stopPropagation();
 });
+// Mobile Menu
 mobileMenu.onclick = function () {
   const isClosed = header.clientHeight === headerHeight;
   if (isClosed) {
